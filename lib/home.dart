@@ -18,7 +18,7 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Theme.of(context).colorScheme.background,
+      backgroundColor: Colors.transparent,
       body: Center(
         child: SizedBox(
           width: 650,
@@ -32,7 +32,6 @@ class _HomeState extends State<Home> {
               side: BorderSide(color: Theme.of(context).colorScheme.primary, width: 2),
             ),
             elevation: 25,
-
             margin: const EdgeInsets.symmetric(vertical: 50, horizontal: 50),
             child: Padding(
               padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 25),

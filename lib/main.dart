@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tempcalc/animatedBG.dart';
 import 'package:tempcalc/home.dart';
 
 void main() {
@@ -35,7 +36,8 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurpleAccent),
         // useMaterial3: true,
       ),
-      home: const Home(),
+      // home: const Home(),
+      home: AnimatedBG(),
     );
   }
 }

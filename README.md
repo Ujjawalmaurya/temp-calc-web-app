@@ -1,1 +1,3 @@
-# temp-calc-web-app
+# Temperature calculator
+
+A new Flutter project.

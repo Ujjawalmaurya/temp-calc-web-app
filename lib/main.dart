@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tempcalc/home.dart';
 
 void main() {
   runApp(const MyApp());
@@ -11,62 +12,30 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Temperature Calculator webApp ',
+      darkTheme: ThemeData(
+        colorScheme: const ColorScheme(
+          brightness: Brightness.dark,
+          primary: Colors.greenAccent,
+          onPrimary: Colors.orangeAccent,
+          secondary: Colors.blueGrey,
+          onSecondary: Colors.tealAccent,
+          error: Colors.redAccent,
+          onError: Colors.red,
+          background: Colors.black54,
+          onBackground: Colors.grey,
+          surface: Colors.purpleAccent,
+          onSurface: Colors.white,
+        ),
+        // useMaterial3: true,
+      ),
+      themeMode: ThemeMode.system,
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurpleAccent),
         // useMaterial3: true,
       ),
       home: const Home(),
-    );
-  }
-}
-
-class Home extends StatefulWidget {
-  const Home({super.key});
-
-  @override
-  State<Home> createState() => _HomeState();
-}
-
-class _HomeState extends State<Home> {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      // appBar: AppBar(
-      //   backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-      //   title: const Text('widget.title'),
-      // ),
-      body: Center(
-        child: SizedBox(
-          width: 600,
-          height: 600,
-          child: Card(
-            margin: EdgeInsets.symmetric(vertical: 50, horizontal: 50),
-            child: Padding(
-              padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 25),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                mainAxisSize: MainAxisSize.max,
-                children: [
-                  const TextField(
-                    decoration: InputDecoration(
-                        hintText: "Enter Values",
-                        alignLabelWithHint: true,
-                        suffixIcon: Icon(Icons.terminal_outlined)),
-                  ),
-                  // TextField(),
-                  // ElevatedButton.icon(
-                  //   onPressed: () {},
-                  //   icon: const Icon(Icons.private_connectivity_sharp),
-                  //   label: const Text("Convert"),
-                  // )
-                  Text("5847*C", style: Theme.of(context).textTheme.displayMedium)
-                ],
-              ),
-            ),
-          ),
-        ),
-      ),
     );
   }
 }
